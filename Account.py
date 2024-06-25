@@ -16,24 +16,12 @@ class Account:
         """Sets the interest gained for the the account"""
         self.interest = interest
 
-class SavingsAccount(Account):
-    """Creating a SavingsAccount class that inherits from the Account class"""
-    def __init__(self, balance, interest):
-        self.balance = balance
-        self.interest = interest
+    calculate_interest = (lambda balance, interest: balance * interest)
 
-    # This method calculates the interest earned.
-    def calculate_interest(self, interest):
-        """Calculates the interest earned"""
-        return interest
+class SavingsAccount(Account):
+    def __init__(self, balance, interest):
+        super().__init__(balance, interest)
 
 class CDAccount(Account):
-    """Creating a CDAccount class that inherits from the Account class"""
     def __init__(self, balance, interest):
-        self.balance = balance
-        self.interest = interest    
-
-    # This method calculates the interest earned.
-    def calculate_interest(self, interest):
-        """Calculates the interest earned"""
-        return interest
+        super().__init__(balance, interest)

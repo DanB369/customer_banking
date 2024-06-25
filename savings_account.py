@@ -19,19 +19,17 @@ def create_savings_account(balance, interest_rate, months):
     my_account = Ac.Account(balance, 0.05)
 
     # Calculate interest earned
-    interest_earned = my_account.calculate_interest(balance * 0.05 * months)
+    interest_earned = my_account.calculate_interest(balance * interest_rate * months)
 
     # Update the savings account balance by adding the interest earned
     updated_balance = balance + interest_earned
-    balance= updated_balance
+    balance = updated_balance
 
     # Pass the updated_balance to the set balance method using the instance of the SavingsAccount class.
-    savings_bal = Ac.SavingsAccount.selfbalance
-    savings_bal = updated_balance
+    my_account.set_balance(updated_balance)
 
     # Pass the interest_earned to the set interest method using the instance of the SavingsAccount class.
-    savings_interest = Ac.SavingsAccount.selfinterest
-    savings_interest = interest_earned
+    my_account.set_interest(interest_earned)
 
     # Return the updated balance and interest earned.
     return updated_balance, interest_earned
