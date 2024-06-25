@@ -34,6 +34,7 @@ def main():
     # Print out the interest earned and updated CD account balance with interest earned for the given months.
     print(f"The interest earned on the CD account is: {interest_cd_earned}")
     print(f"The updated CD account balance is: {updated_cd_balance}")
+    print("Thank you for using our banking system. Have a great day!")
 
 if __name__ == "__main__":
     main()
