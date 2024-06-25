@@ -2,9 +2,10 @@
 
 class Account:
     """Creating an Account class with methods"""
-    def __init__(self, balance, interest):
+    def __init__(self, balance, interest, months=12):
         self.balance = balance
         self.interest = interest
+        self.months = months
 
     # This method sets the balance of the account.
     def set_balance(self, balance):
@@ -16,12 +17,15 @@ class Account:
         """Sets the interest gained for the the account"""
         self.interest = interest
 
-    calculate_interest = (lambda balance, interest: balance * interest)
+# def calculate_interest(self, balance, interest, months):
+#     return self.balance * self.interest * self.months
 
 class SavingsAccount(Account):
-    def __init__(self, balance, interest):
-        super().__init__(balance, interest)
+    pass
+
+    def __init__(self, balance, interest, months=12):
+        super().__init__(balance, interest, months)
 
 class CDAccount(Account):
-    def __init__(self, balance, interest):
-        super().__init__(balance, interest)
+    def __init__(self, balance, interest, months=12):
+        super().__init__(balance, interest, months)
